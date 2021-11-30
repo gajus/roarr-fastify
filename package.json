@@ -1,0 +1,69 @@
+{
+  "author": {
+    "email": "gajus@gajus.com",
+    "name": "Gajus Kuizinas",
+    "url": "http://gajus.com"
+  },
+  "ava": {
+    "extensions": [
+      "ts"
+    ],
+    "files": [
+      "test/roarr/**/*"
+    ],
+    "require": [
+      "ts-node/register/transpile-only"
+    ]
+  },
+  "dependencies": {
+    "serialize-error": "^8.0.0"
+  },
+  "description": "Roarr Fastify compatible logger.",
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@types/globalthis": "^1.0.1",
+    "@types/json-stringify-safe": "^5.0.0",
+    "@types/node": "^16.11.11",
+    "@types/semver-compare": "^1.0.1",
+    "@types/sinon": "^10.0.6",
+    "ava": "^3.15.0",
+    "coveralls": "^3.1.1",
+    "del-cli": "^4.0.1",
+    "eslint": "^8.3.0",
+    "eslint-config-canonical": "^32.43.0",
+    "fastify": "^3.24.1",
+    "husky": "^7.0.4",
+    "nyc": "^15.1.0",
+    "roarr": "^7.8.0",
+    "semantic-release": "^18.0.1",
+    "sinon": "^12.0.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  },
+  "engines": {
+    "node": ">=12.0"
+  },
+  "keywords": [
+    "roarr",
+    "fastify"
+  ],
+  "license": "BSD-3-Clause",
+  "main": "./dist/src/index.js",
+  "name": "@roarr/fastify",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gajus/roarr-fastify.git"
+  },
+  "scripts": {
+    "build": "del-cli ./dist && tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint ./src ./test && tsc --noEmit",
+    "test": "NODE_ENV=test ava --serial --verbose"
+  },
+  "typings": "./dist/src/index.d.ts",
+  "version": "1.0.0",
+  "peerDependencies": {
+    "fastify": "^3.24.1",
+    "roarr": "^7.8.0"
+  }
+}
