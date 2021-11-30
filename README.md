@@ -2,7 +2,7 @@
 
 [![Travis build status](https://img.shields.io/travis/gajus/roarr-fastify/main.svg?style=flat-square)](https://app.travis-ci.com/github/gajus/roarr-fastify)
 [![Coveralls](https://img.shields.io/coveralls/gajus/roarr-fastify.svg?style=flat-square)](https://coveralls.io/github/gajus/roarr-fastify)
-[![NPM version](http://img.shields.io/npm/v/@roarr/browser-log-writer.svg?style=flat-square)](https://www.npmjs.com/package/@roarr/browser-log-writer)
+[![NPM version](http://img.shields.io/npm/v/@roarr/fastify.svg?style=flat-square)](https://www.npmjs.com/package/@roarr/fastify)
 [![Canonical Code Style](https://img.shields.io/badge/code%20style-canonical-blue.svg?style=flat-square)](https://github.com/gajus/canonical)
 [![Twitter Follow](https://img.shields.io/twitter/follow/kuizinas.svg?style=social&label=Follow)](https://twitter.com/kuizinas)
 
