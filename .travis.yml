@@ -4,7 +4,6 @@ cache:
 env:
   - HUSKY_SKIP_INSTALL=true
 node_js:
-  - 12
   - 16
 script:
   - npm run lint
