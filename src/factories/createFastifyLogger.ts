@@ -10,6 +10,10 @@ import {
 
 export const createFastifyLogger = (Roarr: Logger): FastifyLoggerInstance => {
   return Roarr.child((message): any => {
+    if (!message.context.reqId) {
+      return message;
+    }
+
     const newContext = {
       ...message.context,
     };
