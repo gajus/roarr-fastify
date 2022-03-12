@@ -35,7 +35,7 @@ export const createFastifyLogger = (Roarr: Logger): FastifyLoggerInstance => {
 
     if (res) {
       newContext.response = {
-        statusCode: res.raw.statusCode,
+        statusCode: res.raw?.statusCode,
       };
     }
 
