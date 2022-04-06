@@ -47,6 +47,7 @@ test('serializes error', (t) => {
 
   log.error({
     err: new Error('foo'),
+    reqId: '1',
   }, 'bar');
 
   t.regex(write.firstCall.args[0], /Error: foo/u);

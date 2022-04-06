@@ -8,9 +8,15 @@ import {
   serializeError,
 } from 'serialize-error';
 
-export const createFastifyLogger = (Roarr: Logger): FastifyLoggerInstance => {
+type Configuration = {
+  readonly requestIdLogLabel: string,
+};
+
+export const createFastifyLogger = (Roarr: Logger, configuration?: Configuration): FastifyLoggerInstance => {
+  const requestIdLogLabel = configuration?.requestIdLogLabel ?? 'reqId';
+
   return Roarr.child((message): any => {
-    if (!message.context.reqId) {
+    if (!message.context[requestIdLogLabel]) {
       return message;
     }
 

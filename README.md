@@ -57,3 +57,16 @@ app.get('/', (request) => {
   // {"context":{"requestId":"req-1","program":"your-program-name","logLevel":30},"message":"bar"}
 });
 ```
+
+### Configuration
+
+If you have customized [`requestIdLogLabel` setting](https://www.fastify.io/docs/latest/Reference/Server/#requestidloglabel) in Fastify, then you also need to pass it to `@roarr/fastify`:
+
+```ts
+const app = createFastify({
+  logger: createFastifyLogger(log, {
+    requestIdLogLabel: 'requestId'
+  }),
+  requestIdLogLabel: 'requestId'
+});
+```
