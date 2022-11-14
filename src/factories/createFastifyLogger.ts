@@ -28,12 +28,12 @@ export const createFastifyLogger = (Roarr: Logger, configuration?: Configuration
 
     if (req) {
       newContext.request = {
+        headers: req.headers,
         hostname: req.hostname,
         method: req.method,
         remoteAddress: req.ip,
         remotePort: req.socket?.remotePort,
         url: req.url,
-        version: req.headers?.['accept-version'],
       };
     }
 
